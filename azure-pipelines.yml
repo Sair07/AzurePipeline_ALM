@@ -17,6 +17,7 @@ jobs:
       - task: UsePythonVersion@0
         inputs:
           versionSpec: 3.12.4
+          addToPath: True
       - script: 
           python3 $(Build.SourcesDirectory)/UploadAttachment_TestInstance.py
         displayName: 'Execute Python Script'
