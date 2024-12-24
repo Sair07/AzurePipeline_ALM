@@ -1,0 +1,23 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger: none
+
+pool:
+  name: 'UFT_One_Application'
+
+jobs:
+  - job: RunPythonScript
+    displayName: 'Executing script to connect to ALM'
+    pool:
+      name: 'UFT_One_Application'
+    steps:
+      - task: UsePythonVersion@0
+        inputs:
+          versionSpec: 3.12
+      - script: 
+          python3 $(Build.SourcesDirectory)/UploadAttachment_TestInstance.py
+        displayName: 'Execute Python Script'
+
