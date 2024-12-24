@@ -16,7 +16,7 @@ jobs:
     steps:
       - task: UsePythonVersion@0
         inputs:
-          versionSpec: 3.12
+          versionSpec: 3.12.4
       - script: 
           python3 $(Build.SourcesDirectory)/UploadAttachment_TestInstance.py
         displayName: 'Execute Python Script'
