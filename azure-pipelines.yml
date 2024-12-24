@@ -6,13 +6,13 @@
 trigger: none
 
 pool:
-  name: 'UFT_One_Application'
+  name: 'UFT Server'
 
 jobs:
   - job: RunPythonScript
     displayName: 'Executing script to connect to ALM'
     pool:
-      name: 'UFT_One_Application'
+      name: 'UFT Server'
     steps:
       - task: UsePythonVersion@0
         inputs:
