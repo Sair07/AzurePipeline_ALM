@@ -16,6 +16,6 @@ jobs:
     steps:
       - checkout: self
       - script: 
-          python3 $(Build.SourcesDirectory)/UploadAttachment_TestInstance.py
+          python UploadAttachment_TestInstance.py
         displayName: 'Execute Python Script'
 
