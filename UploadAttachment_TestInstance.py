@@ -33,19 +33,7 @@ def connect_to_project(domain, project):
 #function to create defect in ALM
 def create_defect():
     i = 0    
-    oTestSet = ota_connection.TestSetFactory.Item(29831)
-    oTestSetTest = oTestSet.TSTestFactory
-    allTests = oTestSetTest.NewList("")
-    filepath = r"C:\Users\3644810\OneDrive - Danaher\Desktop\Stage_Test_Automation_Report.html"
-    print(filepath)
-    for instance in allTests:
-        print(instance.id , ":", instance.hasAttachment)
-        attFact = instance.Attachments 
-        theAtt = attFact.AddItem(None) 
-        theAtt.FileName = filepath
-        theAtt.Type = 1
-        theAtt.Description = "Run Report"
-        theAtt.Post()
+    
     #    instance.post()
     #for oTestInstance in allTests:
     #    oTest = ota_connection.TestFactory.Item(oTestInstance.Field("TC_TEST_ID"))        
